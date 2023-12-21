@@ -52,7 +52,8 @@ const signIn=async(req,res,next)=>{
 
   const cookieOption={
     maxAge:24*60*60*1000,//24h
-    httpOnly:true
+    httpOnly:true,
+      sameSite: 'None'
   }
   
   res.cookie("token",token,cookieOption);
